@@ -1,0 +1,32 @@
+.panel {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn {
+  color: slategray;
+  margin-left: 0.75em;
+  line-height: 29px;
+  cursor: pointer;
+}
+/* Disable and style dropdown */
+.dropdown {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 8em;
+  background-color: #f7bac2;
+  border-radius: 5px;
+}
+.dropdown.small {
+  width: 5em;
+}
+.dropdown select {
+  background: transparent;
+  border: none;
+  appearance: none;
+  outline: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  color: slategray;
+}

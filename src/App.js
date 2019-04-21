@@ -11,7 +11,7 @@ const App = () => {
       <header className='App-header'>
         <Nav />
         <Route exact path='/' component={Dashboard} />
-        <Route path='/dog-list' component={DogList} />
+        <Route path='/my-list' component={DogList} />
       </header>
     </div>
   );

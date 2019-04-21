@@ -51,16 +51,18 @@ class Dashboard extends Component {
       <div className='Dashboard'>
         <Feedback feedback={this.state.feedback} />
         <DogPic src={this.state.photoUrl} feedback={this.state.feedback} />
-        <BreedPanel
-          breed={this.state.breed}
-          handleInputChange={this.handleInputChange}
-          requestPicture={this.requestPicture}
-        />
-        <RatePanel
-          rate={this.state.rate}
-          handleInputChange={this.handleInputChange}
-          ratePicture={this.ratePicture}
-        />
+        <div className='toolbar'>
+          <BreedPanel
+            breed={this.state.breed}
+            handleInputChange={this.handleInputChange}
+            requestPicture={this.requestPicture}
+          />
+          <RatePanel
+            rate={this.state.rate}
+            handleInputChange={this.handleInputChange}
+            ratePicture={this.ratePicture}
+          />
+        </div>
       </div>
     );
   }
