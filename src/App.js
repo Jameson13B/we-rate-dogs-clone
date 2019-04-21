@@ -18,10 +18,3 @@ const App = () => {
 };
 
 export default App;
-
-// - Create ratePicture function on Dashboard.
-//    - When the user assigns a numeric rating, store
-//      the rating and dog picture url in local storage.
-// - Format/style Dashboard.
-// - Build a dashboard page that allows the user to see
-//   all of the dogs that they have rated on local storage.
