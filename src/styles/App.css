@@ -1,11 +1,12 @@
 .App {
   text-align: center;
-  background-color: #eee;
+  background-color: #e9e9e9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #282c34;
+  padding: 15px 0;
 }
 
 .feedback {
