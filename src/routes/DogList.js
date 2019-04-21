@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/DogList.css';
 
 class DogList extends Component {
@@ -9,24 +10,32 @@ class DogList extends Component {
     };
   }
   componentDidMount() {
-    this.setState({
-      myList: JSON.parse(window.localStorage.getItem('myList'))
-    });
+    if (window.localStorage.getItem('myList')) {
+      this.setState({
+        myList: JSON.parse(window.localStorage.getItem('myList'))
+      });
+    }
   }
   render() {
     return (
       <div className='DogList'>
         <h1 className='title'>myList</h1>
-        <ul>
-          {this.state.myList.map((rating, i) => {
-            return (
-              <li key={i}>
-                <h1 className='rating'>{rating.rating}/10</h1>
-                <img src={rating.photoUrl} alt='dog-pic' />
-              </li>
-            );
-          })}
-        </ul>
+        {this.state.myList.length > 0 ? (
+          <ul>
+            {this.state.myList.map((rating, i) => {
+              return (
+                <li key={i}>
+                  <h1 className='rating'>{rating.rating}/10</h1>
+                  <img src={rating.photoUrl} alt='dog-pic' />
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <h1 className='empty'>
+            No Dogs rated yet. Rate a dog <Link to='/'>here</Link>.
+          </h1>
+        )}
       </div>
     );
   }

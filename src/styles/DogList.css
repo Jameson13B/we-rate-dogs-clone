@@ -1,5 +1,5 @@
 .DogList {
-  min-width: 600px;
+  max-width: 600px;
   background-color: #f4f4f4;
   padding: 15px 15px;
 }
@@ -23,6 +23,13 @@
 .DogList .rating {
   font-size: 3em;
   margin-bottom: 0;
+}
+.DogList .empty {
+  margin: 15px 20px;
+  font-size: 2em;
+}
+.empty a {
+  color: #f7bac2;
 }
 @media (max-width: 600px) {
   .DogList li {
