@@ -1,6 +1,7 @@
 .panel {
   display: flex;
   justify-content: space-evenly;
+  text-align: left;
 }
 .btn {
   color: slategray;
@@ -10,7 +11,7 @@
 }
 /* Disable and style dropdown */
 .dropdown {
-  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 93% 0;
   height: 29px;
   overflow: hidden;
   width: 8em;
@@ -27,6 +28,8 @@
   outline: none;
   font-size: 14px;
   height: 29px;
-  padding: 5px;
+  padding: 5px 0 5px 10px;
   color: slategray;
+  width: 100%;
+  cursor: pointer;
 }

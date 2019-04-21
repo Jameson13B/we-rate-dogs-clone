@@ -25,7 +25,7 @@ const BreedPanel = props => {
           <option value='dalmatian'>Dalmatian</option>
           <option value='dane'>Great Dane</option>
           <option value='doberman'>Doberman</option>
-          <option value='germanshepherd'>German Shepherd</option>
+          <option value='germanshepherd'>German Shep</option>
           <option value='labrador'>Labrador</option>
           <option value='pomeranian'>Pomeranian</option>
           <option value='poodle'>Poodle</option>

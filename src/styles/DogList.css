@@ -1,0 +1,32 @@
+.DogList {
+  min-width: 600px;
+  background-color: #f4f4f4;
+  padding: 15px 15px;
+}
+.DogList .title {
+  margin: 0;
+  font-size: 5em;
+}
+.DogList img {
+  max-width: 450px;
+}
+.DogList ul {
+  padding: 0;
+  margin-top: 0;
+}
+.DogList li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.DogList .rating {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .DogList li {
+    display: flex;
+    flex-direction: column;
+  }
+}

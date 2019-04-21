@@ -8,7 +8,6 @@ const RatePanel = props => {
           value={props.breed}
           onChange={props.handleInputChange}
           name='rate'
-          className='dropdown'
         >
           <option value='10'>10</option>
           <option value='11'>11</option>

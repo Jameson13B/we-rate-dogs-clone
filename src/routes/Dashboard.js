@@ -12,7 +12,7 @@ class Dashboard extends Component {
     this.state = {
       photoUrl: '',
       breed: '',
-      rate: '',
+      rate: '10',
       feedback: null
     };
   }
@@ -44,7 +44,17 @@ class Dashboard extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   ratePicture = () => {
-    console.log('Picture Rated');
+    // create a rating
+    let rating = {
+      photoUrl: this.state.photoUrl,
+      rating: this.state.rate,
+      date: Date.now()
+    };
+    // get list from local storage and push on new rating
+    let myList = JSON.parse(window.localStorage.getItem('myList')) || [];
+    myList.push(rating);
+    window.localStorage.setItem('myList', JSON.stringify(myList));
+    this.requestPicture();
   };
   render() {
     return (
