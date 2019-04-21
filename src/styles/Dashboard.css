@@ -8,3 +8,11 @@
   justify-content: space-around;
   padding: 10px;
 }
+@media (max-width: 600px) {
+  .Dashboard {
+    min-width: 300px;
+  }
+  .toolbar {
+    flex-direction: column;
+  }
+}

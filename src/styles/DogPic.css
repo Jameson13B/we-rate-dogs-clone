@@ -4,3 +4,9 @@
   max-height: 70vh;
   border-radius: 20px;
 }
+@media (max-width: 600px) {
+  .dog-pic {
+    width: 100%;
+    min-width: 300px;
+  }
+}

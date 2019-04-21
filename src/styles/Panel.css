@@ -33,3 +33,18 @@
   width: 100%;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .panel {
+    justify-content: space-between;
+    padding: 0 1.5em;
+  }
+  .panel:nth-child(2) {
+    margin-top: 15px;
+  }
+  .dropdown.small {
+    width: 8em;
+  }
+  .btn {
+    margin: 0 auto;
+  }
+}

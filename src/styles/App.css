@@ -13,3 +13,8 @@
   color: red;
   font-weight: bold;
 }
+@media (max-width: 600px) {
+  .App {
+    padding: 0;
+  }
+}
