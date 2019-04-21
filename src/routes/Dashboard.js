@@ -40,8 +40,11 @@ class Dashboard extends Component {
         });
       });
   };
-  handleInputChange = async e => {
+  handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+  ratePicture = () => {
+    console.log('Picture Rated');
   };
   render() {
     return (
@@ -56,7 +59,7 @@ class Dashboard extends Component {
         <RatePanel
           rate={this.state.rate}
           handleInputChange={this.handleInputChange}
-          // ratePicture={this.ratePicture}
+          ratePicture={this.ratePicture}
         />
       </div>
     );
