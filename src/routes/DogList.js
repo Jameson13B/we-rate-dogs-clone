@@ -19,7 +19,7 @@ class DogList extends Component {
   render() {
     return (
       <div className='DogList'>
-        <h1 className='title'>myList</h1>
+        <h1 className='title'>Rated</h1>
         {this.state.myList.length > 0 ? (
           <ul>
             {this.state.myList.map((rating, i) => {
