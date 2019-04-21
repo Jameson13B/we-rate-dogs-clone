@@ -2,8 +2,12 @@ import React from 'react';
 
 const BreedPanel = props => {
   return (
-    <div>
-      <select value={props.breed} onChange={props.handleBreedChange}>
+    <div className='BreedPanel'>
+      <select
+        value={props.breed}
+        onChange={props.handleInputChange}
+        name='breed'
+      >
         <option value=''>Random</option>
         <option value='airedale'>Airedale</option>
         <option value='akita'>Akita</option>

@@ -4,6 +4,7 @@ import DogPic from '../components/DogPic';
 import Feedback from '../components/Feedback';
 import BreedPanel from '../components/BreedPanel';
 import '../styles/Dashboard.css';
+import RatePanel from '../components/RatePanel';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Dashboard extends Component {
     this.state = {
       photoUrl: '',
       breed: '',
+      rate: '',
       feedback: null
     };
   }
@@ -38,8 +40,8 @@ class Dashboard extends Component {
         });
       });
   };
-  handleBreedChange = async e => {
-    this.setState({ breed: e.target.value });
+  handleInputChange = async e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
   render() {
     return (
@@ -48,8 +50,13 @@ class Dashboard extends Component {
         <DogPic src={this.state.photoUrl} feedback={this.state.feedback} />
         <BreedPanel
           breed={this.state.breed}
-          handleBreedChange={this.handleBreedChange}
+          handleInputChange={this.handleInputChange}
           requestPicture={this.requestPicture}
+        />
+        <RatePanel
+          rate={this.state.rate}
+          handleInputChange={this.handleInputChange}
+          // ratePicture={this.ratePicture}
         />
       </div>
     );
