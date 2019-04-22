@@ -8,6 +8,10 @@
   color: #282c34;
   padding: 15px 0;
 }
+.App .title {
+  margin: 0 0 15px;
+  color: slategray;
+}
 
 .feedback {
   color: red;
@@ -16,5 +20,8 @@
 @media (max-width: 600px) {
   .App {
     padding: 0;
+  }
+  .App .title {
+    margin-top: 15px;
   }
 }

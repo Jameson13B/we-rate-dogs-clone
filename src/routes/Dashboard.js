@@ -3,8 +3,8 @@ import axios from 'axios';
 import DogPic from '../components/DogPic';
 import Feedback from '../components/Feedback';
 import BreedPanel from '../components/BreedPanel';
-import '../styles/Dashboard.css';
 import RatePanel from '../components/RatePanel';
+import '../styles/Dashboard.css';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -20,11 +20,12 @@ class Dashboard extends Component {
     this.requestPicture();
   }
   requestPicture = () => {
-    // Sets path and sends request for photo
+    // Sets path for request
     let path =
       this.state.breed === ''
         ? 'https://dog.ceo/api/breeds/image/random'
         : `https://dog.ceo/api/breed/${this.state.breed}/images/random`;
+    // sends request for photo URL
     axios
       .get(path)
       .then(res => {
