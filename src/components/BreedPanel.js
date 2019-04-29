@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/Panel.css';
 
 const BreedPanel = props => {
+  const [breedList, changeBreedList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://dog.ceo/api/breeds/list/all')
+      .then(res => {
+        changeBreedList(res.data.message);
+      })
+      .catch(err => console.log(err));
+  }, []);
+
   return (
     <div className='BreedPanel panel'>
       <div className='dropdown'>
@@ -11,28 +23,13 @@ const BreedPanel = props => {
           name='breed'
         >
           <option value=''>Random</option>
-          <option value='airedale'>Airedale</option>
-          <option value='akita'>Akita</option>
-          <option value='appenzeller'>Appenzeller</option>
-          <option value='beagle'>Beagle</option>
-          <option value='boxer'>Boxer</option>
-          <option value='bulldog'>Bulldog</option>
-          <option value='cattledog'>Cattle Dog</option>
-          <option value='chihuahua'>Chihuahua</option>
-          <option value='collie'>Collie</option>
-          <option value='corgi'>Corgi</option>
-          <option value='dachshund'>Dachshund</option>
-          <option value='dalmatian'>Dalmatian</option>
-          <option value='dane'>Great Dane</option>
-          <option value='doberman'>Doberman</option>
-          <option value='germanshepherd'>German Shep</option>
-          <option value='labrador'>Labrador</option>
-          <option value='pomeranian'>Pomeranian</option>
-          <option value='poodle'>Poodle</option>
-          <option value='retriever'>Retriever</option>
-          <option value='rottweiler'>Rottweiler</option>
-          <option value='sheepdog'>Sheepdog</option>
-          <option value='shihtzu'>Shih Tzu</option>
+          {Object.keys(breedList).map((breed, i) => {
+            return (
+              <option value={breed} key={i}>
+                {breed}
+              </option>
+            );
+          })}
         </select>
       </div>
       <span onClick={props.requestPicture} className='btn'>
